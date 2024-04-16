@@ -1,0 +1,64 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    /* background-color: blue; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-left .navbar-right {
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    flex: 6;
+}
+
+.navIcon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.navProfileIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navListItem {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.navSearchIcon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.toggleLightDarkMode {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 15px;
+}
