@@ -1,0 +1,21 @@
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  height: fit-content;
+}
+
+footer .navbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
