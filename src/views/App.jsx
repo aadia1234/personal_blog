@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 // import reactLogo freact 
-import HomeView from './HomeView';
 import PostView from './PostView'
 import { Routes, Route } from "react-router-dom";
 import NavBar from './NavBar';
@@ -15,26 +14,26 @@ function App() {
 
   return (
     <>
-    <body>
+    <div className="blog-body">
       <NavBar/>
-      <div class="blog-content">
+      <div className="blog-content">
         <Routes>
-          <Route exact path="/" element={<HomeView/>}/>
-          <Route exact path="/category/:categoryID" element={<CategoryPostsView/>}/>
+          <Route exact path="/" element={<CategoryPostsView home={true}/>}/>
+          <Route exact path="/category/:categoryID" element={<CategoryPostsView home={false}/>}/>
           <Route exact path="/posts/:postID" element={<PostView/>}/>
         </Routes>
       </div>
       <footer>
-        <nav class="navbar bg-body-secondary">
-          <div class="container-fluid">
-            <div class="navbar-nav me-auto">
-              <a class="nav-link " href="/">Copyright © 2024 Aadi Anand</a>
+        <nav className="navbar bg-body-secondary">
+          <div className="container-fluid">
+            <div className="navbar-nav me-auto">
+              <a className="nav-link " href="/">Copyright © 2024 Aadi Anand</a>
             </div>
-            <img class="d-flex mx-3" src={imgSrc()} width="30px" role="button" onClick={() => setDarkMode(!darkMode)}/>
+            <img className="d-flex mx-3" src={imgSrc()} width="30px" role="button" onClick={() => setDarkMode(!darkMode)}/>
           </div>
         </nav>
       </footer>
-    </body>
+    </div>
   </>
   );
 }

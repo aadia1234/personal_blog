@@ -29,5 +29,6 @@ router.register(r'comments', views.CommentView, 'comments')
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("blogapi/", include(router.urls)),
-    path('blog/', include('blogapi.urls'))
+    path('blog/', include('blogapi.urls')),
+    path("tinymce/", include("tinymce.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
