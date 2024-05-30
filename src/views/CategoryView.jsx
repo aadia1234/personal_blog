@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import django from "../api/axios.js";
+import { URLS } from '../api/constants.js';
 import { useParams } from 'react-router-dom';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 
 
 export default function CategoryPostsView(props) {
@@ -9,59 +11,52 @@ export default function CategoryPostsView(props) {
     const [category, setCategory] = useState({id: null, name: null})
     const { categoryID } = useParams()
     const isHome = props.home
-    const cardStyle = { minWidth: "250px", maxWidth: "350px", minHeight: "500px", margin: "auto" }
-
+    const cardStyle = { width: "100%", minHeight: "500px", margin: "auto"}
+    const cardTextStyle = {overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", "-webkit-line-clamp": "4", "-webkit-box-orient": "vertical"}
     useEffect(() => {
-        let url = "posts/"
-        url = !isHome ? url + "?category=" + categoryID : url
-        django.get(url)
-        .then(response => { setPosts(response.data) })
-        .catch(error => { console.log(error); });
+        django.get(!isHome ? URLS.POSTS_BY_CATEGORY + categoryID : URLS.POSTS)
+        .then(response => setPosts(response.data))
+        .catch(error => console.log(error))
     }, [isHome]);
 
     useEffect(() => {
-        django.get("categories/" + categoryID)
+        django.get(URLS.CATEGORIES + categoryID)
         .then((response) => setCategory(response.data))
         .catch((error) => console.log(error))
     }, [isHome])
 
-    function postsView(size) {
-        return (
-            posts.map((post) => {
-                let date = new Date(post.last_modified)
-                return <div className="col my-4" key={post.id}>
-                    <div className="card h-100" style={cardStyle}>
-                        <img src={post.banner} className="card-img-top" height="200px" alt="..."></img>
-                        <div className="card-body position-relative">
-                            <h5 className="card-title">{post.title}</h5>
-                            {/* <p className="card-text text-truncate">{getPostContent("<p>Hello</p><a href='http://w3c.org'>W3C</a>")}</p> */}
-                            <a href={"/posts/" + post.id} className="position-absolute bottom-0 mb-3 btn btn-primary">Read</a>
-                        </div>
-                        <div className="card-footer">
-                            <small className="text-muted">Last Updated: {date.toDateString()}</small>
-                        </div>
-                    </div>
-                </div>
-            }).slice(0, size)
-        )
-    }
-
-    function title() {
-        const title = isHome ? "Welcome to My Blog!" : category.name
-
-        return (
-            <>
-                <h1>{title}</h1>
-                {isHome ? <h6>Here's the list of the most recent posts I've made</h6> : null}
-            </>
-        )
+    function getPostContent(htmlStr) {
+        var t = document.createElement("textarea");
+        t.innerHTML = htmlStr;
+        var tdiv = document.createElement("p");
+        tdiv.innerHTML = t.value;
+        return tdiv.textContent || tdiv.innerText || "";
     }
 
     return (
         <>
-            <div className="m-5 p-4 text-center">{title()}</div>
+            <div className="m-5 p-4 text-center">
+                <h1>{isHome ? "Welcome to My Blog!" : category.name}</h1>
+                {isHome ? <h6>Here's the list of the most recent posts I've made</h6> : null}
+            </div>
             <hr/>
-            <div className="row row-cols-1 row-cols-md-3 my-5 pb-5 mx-3">{postsView(isHome? 3 : posts.size)}</div>
+            <Row xs={1} md={3} className="g-4 my-5 pb-5">
+                {posts.map((post) => (
+                    <Col className="my-4 px-5" key={post.id}>
+                        <Card style={cardStyle}>
+                            <Card.Img src={post.banner} variant="top" height="200px"/>
+                            <Card.Body className="position-relative">
+                                <Card.Title className="text-truncate">{post.title}</Card.Title>
+                                <Card.Text style={cardTextStyle}>{getPostContent(post.body)}</Card.Text>
+                                <Button variant="primary" href={"/posts/" + post.id} className="position-absolute bottom-0 mb-3">Read</Button>
+                            </Card.Body>
+                            <Card.Footer className="text-muted">
+                                <small>Last Updated: {(new Date(post.last_modified)).toDateString()}</small>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                )).slice(0, isHome ? 3 : posts.size)}
+            </Row>
         </>
-    );
+    )
 }

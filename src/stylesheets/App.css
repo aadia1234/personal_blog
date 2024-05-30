@@ -9,10 +9,6 @@
   min-height: 100%;
 }
 
-footer {
-  height: fit-content;
-}
-
 footer .navbar {
   position: absolute;
   width: 100%;
