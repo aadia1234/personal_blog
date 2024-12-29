@@ -6,6 +6,8 @@ import NavBar from "./NavBar";
 import CategoryPostsView from "./CategoryView";
 import "../stylesheets/App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import About from "./About";
+import Contact from "./Contact";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +25,8 @@ export default function App() {
         <div className="blog-content">
           <Routes>
             <Route exact path="/" element={<CategoryPostsView home={true} />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/contact" element={<Contact />} />
             <Route
               exact
               path="/category/:categoryID"

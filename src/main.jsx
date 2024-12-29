@@ -8,8 +8,8 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App/>
+    <BrowserRouter basename="/aadia1234.github.io" forceRefresh={true}>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
