@@ -112,10 +112,10 @@ export default function NavBar() {
             <Offcanvas.Body className="navbar-collapse" id="navbar">
               <Nav className="me-auto mb-2 mt-2">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href={"/about"}>
+                <Nav.Link href="/about">
                   About
                 </Nav.Link>
-                <Nav.Link href={"/contact"}>
+                <Nav.Link href="/contact">
                   Contact
                 </Nav.Link>
                 <NavDropdown title="Blog Posts">{navCategories()}</NavDropdown>
