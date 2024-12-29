@@ -7,7 +7,7 @@ dotenv.config();
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_PUBLIC_URL,
+  base: "/",
   server: {
     port: 5173,
     hot: true,
