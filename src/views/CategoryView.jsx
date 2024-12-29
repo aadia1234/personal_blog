@@ -64,7 +64,7 @@ export default function CategoryPostsView(props) {
                       <Button
                         variant="primary"
                         href={
-                          import.meta.env.VITE_PUBLIC_URL + URLS.POSTS + post.id
+                          URLS.POSTS + post.id
                         }
                         className="position-absolute bottom-0 mb-3"
                       >

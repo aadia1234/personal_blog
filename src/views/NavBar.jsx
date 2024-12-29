@@ -63,7 +63,7 @@ export default function NavBar() {
       return (
         <NavDropdown.Item
           key={category.id}
-          href={import.meta.env.VITE_PUBLIC_URL + URLS.CATEGORY + category.id}
+          href={URLS.CATEGORY + category.id}
         >
           {category.name}
         </NavDropdown.Item>
@@ -112,10 +112,10 @@ export default function NavBar() {
             <Offcanvas.Body className="navbar-collapse" id="navbar">
               <Nav className="me-auto mb-2 mt-2">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href={import.meta.env.VITE_PUBLIC_URL + "/about"}>
+                <Nav.Link href={"/about"}>
                   About
                 </Nav.Link>
-                <Nav.Link href={import.meta.env.VITE_PUBLIC_URL + "/contact"}>
+                <Nav.Link href={"/contact"}>
                   Contact
                 </Nav.Link>
                 <NavDropdown title="Blog Posts">{navCategories()}</NavDropdown>
