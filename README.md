@@ -49,3 +49,4 @@ Use the following YouTube videos to potentially fix any problems with AWS, or to
  - [How To Get Https For Website || Free SSL Certificate || Forever](https://www.youtube.com/watch?v=li1Spq8rdS0)
  - [Implement Amazon S3 Storage for Static and Media files in Django](https://www.youtube.com/watch?v=JQVQcNN0cXE)
  - [Set Up AWS S3 Bucket with Django for Static and Media Files](https://www.youtube.com/watch?v=Ko52pn1KXS0)
+ - [Deploy a Django Application on EC2 Instance with Nginx](https://www.linkedin.com/pulse/deploy-django-application-ec2-instance-nginx-dtechnologies-cqdif/)
