@@ -14,31 +14,53 @@ export default function Contact() {
           <ul>
             <li>
               Email:&nbsp;&nbsp;&nbsp;
-              <a href="mailto:aadiananddeveloper05@gmail.com">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:aadiananddeveloper05@gmail.com"
+              >
                 aadiananddeveloper05@gmail.com
               </a>
             </li>
             <li>
               LinkedIn:&nbsp;&nbsp;&nbsp;
-              <a href="https://www.linkedin.com/in/aadi-anand/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/aadi-anand/"
+              >
                 https://www.linkedin.com/in/aadi-anand/
               </a>
             </li>
             <li>
               GitHub:&nbsp;&nbsp;&nbsp;
-              <a href="https://github.com/aadia1234">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/aadia1234"
+              >
                 https://github.com/aadia1234
               </a>
             </li>
             <li>
               Instagram:&nbsp;&nbsp;&nbsp;
-              <a href="https://www.instagram.com/aadi.anand.1/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/aadi.anand.1/"
+              >
                 https://www.instagram.com/aadi.anand.1/
               </a>
             </li>
             <li>
               Twitter/X:&nbsp;&nbsp;&nbsp;
-              <a href="https://x.com/aadi_2005">https://x.com/aadi_2005</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://x.com/aadi_2005"
+              >
+                https://x.com/aadi_2005
+              </a>
             </li>
           </ul>
         </div>
