@@ -1,79 +1,94 @@
-import { CSSProperties } from "react";
+import "../stylesheets/PostView.css";
 
 export default function About() {
-  const bodyText = {
-    padding: "5% 0% 5% 0%",
-    textAlign: "left",
-    width: "75%",
-    margin: "auto",
-    marginTop: "15px",
-  };
-
   return (
     <>
-      <div className="m-5 p-4 text-center">
-        <h1>
+      <div className="my-5 py-4">
+        <h1 className="text-center">
           <b>About</b>
         </h1>
 
-        <div id="body" style={bodyText}>
-          <h4>
-            Welcome to MovieMeterix—your ultimate destination for insightful and
-            comprehensive movie reviews!{" "}
-          </h4>
+        <div id="body" className="body-text">
+          <h4>Hi, I'm Aadi Anand!</h4>
           <br></br>
           <h6>
-            Whether you're a casual viewer, a cinema enthusiast, or an aspiring
-            film critic, MovieMeterix is designed to cater to all who share a
-            love for the art of filmmaking.
+            I’m a passionate software developer and mathematics enthusiast,
+            currently pursuing a double degree in Computer Science and
+            Mathematics (B.S) at the University of Maryland – College Park. With
+            a foundation in problem-solving and innovation, I thrive on creating
+            impactful digital experiences, whether it’s through mobile apps, web
+            platforms, or complex algorithms.
           </h6>
           <h6>
-            At MovieMeterix, we believe every film tells a story worth
-            exploring. Our team of dedicated reviewers provides in-depth
-            analyses that go beyond the surface, offering critiques on
-            everything from storytelling, acting performances, direction,
-            cinematography, and even soundtrack choices. With a wide variety of
-            genres and styles, we ensure that every movie lover finds something
-            to match their taste.
+            Over the years, I’ve honed my skills through internships and
+            personal projects. As a Full Stack Developer Intern at Sociable AI,
+            I built a user analytics dashboard using Next.js and TypeScript.
+            During my time as an iOS Software Engineer Intern at LumoImaging, I
+            developed an app to assist medical professionals in tracking patient
+            care. These opportunities have shaped my approach to
+            development—balancing user-centric design with technical excellence.
           </h6>
-          <br></br>
-          <h6>What We Offer:</h6>
-          <ul>
-            <li>
-              <h6>
-                Honest and In-Depth Reviews: Our reviews focus not only on
-                entertainment value but also on the craftsmanship and artistic
-                merit of each film.
-              </h6>
-            </li>
-            <li>
-              <h6>
-                Honest and In-Depth Reviews: Our reviews focus not only on
-                entertainment value but also on the craftsmanship and artistic
-                merit of each film.
-              </h6>
-            </li>
-            <li>
-              <h6>
-                Honest and In-Depth Reviews: Our reviews focus not only on
-                entertainment value but also on the craftsmanship and artistic
-                merit of each film.
-              </h6>
-            </li>
-          </ul>
-          <br></br>
-          <h6>
-            At MovieMeterix, our goal is to create a community of informed
-            movie-goers who appreciate the power of storytelling on the big
-            screen. Dive into our reviews, explore hidden gems, and join us in
-            celebrating the magic of cinema!{" "}
-          </h6>
-          <h6>
-            Let me know if you'd like any adjustments! You can contact me at:{" "}
-            <a href="mailto:aadiananddeveloper05@gmail.com">
-              aadiananddeveloper05@gmail.com
-            </a>
-          </h6>
+          <br />
+          <div>
+            <h5>My Hobbies:</h5>
+            <ul>
+              <li>
+                <h6>
+                  Video Games: Exploring virtual worlds and innovative gameplay.
+                </h6>
+              </li>
+              <li>
+                <h6>Movies: Analyzing stories and cinematic art.</h6>
+              </li>
+              <li>
+                <h6>
+                  Cars: A lifelong fascination with engineering and speed.
+                </h6>
+              </li>
+              <li>
+                <h6>Fitness: Challenging myself to stay active and focused.</h6>
+              </li>
+              <li>
+                <h6>
+                  Programming: Experimenting with new frameworks and
+                  technologies.
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <br />
+          <div>
+            <h5>My Skills:</h5>
+            <ul>
+              <li>
+                <h6>
+                  Programming Languages: Python, Java, C/C++, TypeScript, Swift,
+                  React/React Native
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  Frameworks & Tools: Next.js, Django, Prisma, MongoDB, AWS
+                  (This website was built with AWS services!)
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  Software Development Practices: Agile methodologies,
+                  Test-Driven Development (TDD), and version control with Git
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <br />
+          <div>
+            <h5>A Global Perspective</h5>
+            <h6>
+              Having lived in Hong Kong and Washington, D.C., I’ve been shaped
+              by diverse cultures and experiences that fuel my creativity and
+              adaptability.
+            </h6>
+          </div>
         </div>
       </div>
     </>

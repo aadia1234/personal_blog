@@ -123,7 +123,7 @@ export default function NavBar() {
               <Form
                 className="d-flex"
                 onSubmit={searchPost}
-                style={{ width: isCollapsed ? "100%" : "450px" }}
+                style={{ width: isCollapsed ? "100%" : "400px" }}
               >
                 <Form.Control
                   ref={searchRef}

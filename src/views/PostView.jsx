@@ -85,32 +85,7 @@ export default function PostView() {
                 <h1>{post.title}</h1>
                 <h6>Last Modified: {postDate.toDateString()}</h6>
             </div>
-            <div className="body-text">{Parser(post.body)}</div>
-            <hr className="pb-5"/>
-            <div className="mb-5 comments">
-                <h3 className="m-5 text-center">Comments</h3>
-                <br/>
-                <div className="comments-text pb-3">{getComments()}</div>
-                <hr className="mt-5"/>
-                <div className="new-comment m-5 py-5">
-                    <Form validated={validated} noValidate>
-                        <h3 className="mb-5 text-center">Leave a Comment</h3>
-                        <br/>
-                        <FloatingLabel controlId="nameInput" label="Name" className="mb-3">
-                            <Form.Control ref={nameRef} placeholder="Name" required/>
-                            <Form.Control.Feedback type="invalid">Please enter your name.</Form.Control.Feedback>
-                        </FloatingLabel>
-                        <FloatingLabel controlId="commentInput" label="Comment" className="mb-3">
-                            <Form.Control ref={commentRef} as="textarea" placeholder="Comment" style={{height: "200px"}} required/>
-                            <Form.Control.Feedback type="invalid">Please enter a comment.</Form.Control.Feedback>
-                        </FloatingLabel>
-                        <br/>
-                        <ReCAPTCHA ref={recaptcha} sitekey={REACT_APP_SITE_KEY} required/>
-                        <br/><br/>
-                        <Button variant="primary" onClick={submitComment}>Submit</Button>
-                    </Form>
-                </div>
-            </div>
+            <div className="body-text mb-5">{Parser(post.body)}</div>
         </>
     );
 }
