@@ -22,7 +22,7 @@ from rest_framework import routers
 from blogapi import views
 
 router = routers.DefaultRouter()
-router.register(r'categories', views.CatgeoryView, 'category')
+router.register(r'categories', views.CategoryView, 'category')
 router.register(r'posts', views.PostView, 'post')
 router.register(r'comments', views.CommentView, 'comments')
 
